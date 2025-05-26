@@ -7,6 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzTest {
     @Test
+    void testBuzz() {
+        // This will create or check the approved/received files for this output
+        Approvals.verify(FizzBuzz.of(5));
+    }
+    @Test
     void testDivisibleBy3ReturnsFizz() {
         assertEquals("Fizz", FizzBuzz.of(3));
     }
